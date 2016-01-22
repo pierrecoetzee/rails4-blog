@@ -1,0 +1,9 @@
+.container
+
+  - @comments.each do |comment|
+    %h2
+      Comments for Article:
+      = comment.article.title
+
+    .comment
+      =comment.body

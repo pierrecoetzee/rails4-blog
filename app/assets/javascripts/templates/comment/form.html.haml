@@ -1,0 +1,9 @@
+.comment-update
+  .comment-section{'ng-repeat': 'comment in blogs.selectedArticle.comments'}
+    %textarea{'ng-model': 'comment.body'}
+      {{comment.body}}
+
+
+
+
+

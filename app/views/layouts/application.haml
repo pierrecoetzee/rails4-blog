@@ -1,0 +1,24 @@
+%html{'ng-app': 'AngularBlogger'}
+  %head
+    %title Angular on Rails 4!
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': false
+
+
+    %script{src: 'http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js'}
+
+
+
+    = javascript_include_tag 'application', 'data-turbolinks-track': false
+    = csrf_meta_tags
+
+  %body
+    %nav.navbar.navbar-inverse.navbar-fixed-top{'ng-controller': "MasterCtrl" }
+      .container
+        .navbar-header
+          %a.navbar-brand{'data-no-turbolink': true , href: "{{navigation.menu1}}"} ALL
+          %a.navbar-brand{'data-no-turbolink': true , href: "{{navigation.menu2}}"} CREATE
+
+    .container.main-content
+      %toaster-container
+      =yield
+

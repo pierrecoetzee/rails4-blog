@@ -1,0 +1,18 @@
+#createModal.modal{:role => "dialog"}
+  .modal-dialog
+    .modal-content
+      %form.form-horizontal{"ng-submit" => "save()", :novalidate => ""}
+        .modal-header
+          %button.close{"ng-click": "closeUpdateModal()", :type => "button"} ×
+          %h4.modal-title Article management
+        .modal-body
+          %ng-include{:src => "'article/form.html'"}
+
+          %h2 Comments
+
+          %ng-include{:src => "'comment/form.html'"}
+
+        .modal-footer
+          %button.btn.btn-default{"data-dismiss" => "modal", :type => "button", "ng-click": "updateModal.hide()"} Close
+          %button{type: 'submit' , class: 'btn btn-primary'} save
+

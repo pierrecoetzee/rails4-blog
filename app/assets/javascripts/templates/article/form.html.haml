@@ -1,0 +1,12 @@
+%p
+  Article
+%p
+  %label{for: 'title'} Title
+  %br/
+  %input{placeholder: 'add title here...' ,required: true, type: 'text', 'ng-model': 'blogs.selectedArticle.title', name: 'title'}
+%p
+  %label{for: 'text'} Text
+  %br/
+  %textarea{placeholder: 'add title here...', rows: 3, cols: 40, 'ng-model': 'blogs.selectedArticle.text', name: 'text'}
+
+/%ng-include{:src => "'comment/form.html'"}

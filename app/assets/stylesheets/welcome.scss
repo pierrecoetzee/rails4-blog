@@ -1,0 +1,40 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
+.main-content{
+  padding: 70px 0;
+}
+
+
+.navbar-inverse{
+
+  background-color: #2196F3 !Important;
+  border-color: transparent !Important;
+
+  .navbar-brand{
+    color: #FFF !Important;
+  }
+}
+
+.toast-success {
+  background-color: #49933e !Important;
+}
+.modal-backdrop{
+  opacity: 0.5 !Important;
+}
+.glyphicon-trash:before{
+  color:red;
+}
+.glyphicon-pencil:before{
+  color:#337AB7;
+}
+.glyphicon-zoom-in:before{
+  color: grey;
+}
+

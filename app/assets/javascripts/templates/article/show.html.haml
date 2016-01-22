@@ -1,0 +1,16 @@
+#createModal.modal{:role => "dialog"}
+  .modal-dialog
+    .modal-content
+      %form.form-horizontal{"ng-submit" => "save()", :novalidate => ""}
+        .modal-header
+          %button.close{"ng-click": "blogs.closeModal()", :type => "button"} ×
+          %h4.modal-title Article details
+        .modal-body
+          .title
+            {{ blogs.selectedArticle.title}}
+          .text
+            {{ blogs.selectedArticle.text}}
+
+          %ng-include{:src => "'article/form.html'"}
+
+
