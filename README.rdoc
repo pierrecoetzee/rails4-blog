@@ -1,4 +1,4 @@
-== README
+== Angular on Rails 4
 
 This application is a Ruby on Rails application that will demonstrate the seemless integration of Angular. But,
 more than that it will show how to structure the application's files in a logical way that is readable and understandable.
