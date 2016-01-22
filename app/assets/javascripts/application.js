@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require angular-rails-templates
+//= require angular.min
 
 //= require_tree ./templates
 
