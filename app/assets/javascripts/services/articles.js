@@ -1,12 +1,12 @@
-app.factory('Article', function ($resource) {
+app.factory('Article', ['$resource', function ($resource) {
 	return $resource("/articles/:id/", {id: '@id'}, {
   		update: {
   			method: 'PUT'
   		}
   	});
-});
+}]);
 
-app.service('ArticleService', function (Article, $q, toaster) {
+app.service('ArticleService',['Article','$q', 'toaster', function (Article, $q, toaster) {
 
 	var self =  {
 	  'article': new Article({'title': '', 'text': '', 'comments': [{'body': 'new'}]}),
@@ -96,4 +96,4 @@ app.service('ArticleService', function (Article, $q, toaster) {
 
 	self.loadArticles();
 	return self
-});
+}]);

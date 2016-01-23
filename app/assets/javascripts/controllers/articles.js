@@ -1,8 +1,8 @@
-var comment = new Object()
-comment.body = null
-comment.article_id = null;
+app.controller('ArticleListCtrl', ['$scope', '$modal', 'ArticleService', function($scope,$modal,ArticleService){
 
-app.controller('ArticleListCtrl', function($scope, $modal, ArticleService){
+  var comment = new Object()
+  comment.body = null
+  comment.article_id = null;
 
   $scope.title = 'Manage your articles'
   $scope.sortBy = {order: 'title'}
@@ -61,4 +61,4 @@ app.controller('ArticleListCtrl', function($scope, $modal, ArticleService){
       show: true
     })
   }
-});
+}])

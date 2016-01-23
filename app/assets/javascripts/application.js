@@ -16,18 +16,17 @@
 //= require bootstrap-sprockets
 //= require angular.min
 //= require angular-rails-templates
-
-//= require_tree ./templates
-
 //= require app
+
 //= require ./libs/angular-resource/angular-resource.min
 //= require ./libs/angular-animate/angular-animate.min
 //= require ./libs/angular-strap/dist/angular-strap.min
 //= require ./libs/ladda/dist/ladda.min
 //= require ./libs/angular-ladda/dist/angular-ladda.min
-//= require ./libs/angular-strap/dist/angular-strap.min
 //= require ./libs/angularjs-toaster/toaster.min
 
+
+//= require_tree ./templates
 //= require ./services/articles
-//= require ./controllers/articles
+//=require ./controllers/articles
 
