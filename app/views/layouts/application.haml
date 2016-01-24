@@ -6,6 +6,7 @@
     = csrf_meta_tags
 
   %body
+
     %nav.navbar.navbar-inverse.navbar-fixed-top{'ng-controller': "MasterCtrl" }
       .container
         .navbar-header
@@ -13,6 +14,7 @@
           %a.navbar-brand{'data-no-turbolink': true , href: "{{navigation.menu2}}"} CREATE
 
     .container.main-content
+
       %toaster-container
       =yield
 
