@@ -20,4 +20,4 @@ test:
 production:
   <<: default
   database: rails4angular_production
-  adapter: mysql2
+  adapter: postgresql
