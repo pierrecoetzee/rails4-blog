@@ -2,6 +2,7 @@
 
   %h1
     {{title}}
+
     %button.btn.btn-primary.pull-right{'ng-click': "showUpdateModal()"}
       Create
 
@@ -17,7 +18,8 @@
         Address
         %span.glyphicon.glyphicon-menu-up{"ng-click" => "sortBy.order = 'text'"}
         %span.glyphicon.glyphicon-menu-down{"ng-click" => "sortBy.order = '-text'"}
-      %th{'colspan': 3}
+      - unless production?
+        %th{'colspan': 3}
 
     %tr{'ng-repeat': 'article in blogs.articles', 'ng-click': "blogs.selectedArticle = article"}
       %td
@@ -26,18 +28,20 @@
         {{article.title}}
       %td
         {{article.text}}
-      %td.text-center
-        %span.glyphicon.glyphicon-pencil
-          %a{'ng-click': 'blogs.selectedArticle = article;showUpdateModal();'} edit
-      %td.text-center
-        %span.glyphicon.glyphicon-zoom-in
-          %a{'ng-click': 'blogs.selectedArticle = article;showArticleModal();'} show
-      %td.text-center
-        %span.glyphicon.glyphicon-trash
-          %a{'ng-click': 'blogs.selectedArticle = article; delete()', 'data-confirm': "Are you sure?"} delete
+      - unless production?
+        %td.text-center
+          %span.glyphicon.glyphicon-pencil
+            %a{'ng-click': 'blogs.selectedArticle = article;showUpdateModal();'} edit
+        %td.text-center
+          %span.glyphicon.glyphicon-zoom-in
+            %a{'ng-click': 'blogs.selectedArticle = article;showArticleModal();'} show
+        %td.text-center
+          %span.glyphicon.glyphicon-trash
+            %a{'ng-click': 'blogs.selectedArticle = article; delete()', 'data-confirm': "Are you sure?"} delete
 
-    %tr.lead
-      %td.text-right{colspan: 5 }
-        Total
-      %td.text-center
-        {{blogs.articles.length}}
+    - unless production?
+      %tr.lead
+        %td.text-right{colspan: 5 }
+          Total
+        %td.text-center
+          {{blogs.articles.length}}

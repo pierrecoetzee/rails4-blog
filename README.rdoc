@@ -1,6 +1,6 @@
 == Angular on Rails 4
 
-Web: https://sheltered-spire-23226.herokuapp.com/
+Web: http://rails4-angular-spike.herokuapp.com/
 
 This application is a Ruby on Rails application that will demonstrate the seemless integration of Angular. But,
 more than that it will show how to structure the application's files in a logical way that is readable and understandable.
